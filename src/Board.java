@@ -1,6 +1,6 @@
 public class Board
 {
-    private char[][] board = {{'_','_','_'},{'_','_','_'},{'_','_','_'}};
+    public char[][] board = {{'_','_','_'},{'_','_','_'},{'_','_','_'}};
     
     private boolean isAnXWin = false;
     private boolean isAnOWin = false;
@@ -17,15 +17,16 @@ public class Board
     
     public boolean hasXWin()
     {
-        if (board[0] == {'X','X','X'} || board[0] == {'O','O','O'})
+        char[] rowOfX = {'X', 'X', 'X'};
+        if (board[0].equals(rowOfX))
         {
             isAnXWin = true;
         }
-        else if (board[1] == {'X','X','X'} || board[0] == {'O','O','O'})
+        else if (board[1].equals(rowOfX))
         {
             isAnXWin = true;
         }
-        else if (board[2] == {'X','X','X'} || board[0] == {'O','O','O'})
+        else if (board[2].equals(rowOfX))
         {
             isAnXWin = true;
         }
@@ -58,15 +59,16 @@ public class Board
     
     public boolean hasOWin()
     {
-        if (board[0] == {'O','O','O'})
+        char[] rowOfO = {'O', 'O', 'O'};
+        if (board[0].equals(rowOfO))
         {
             isAnOWin = true;
         }
-        else if (board[1] = {'O','O','O'})
+        else if (board[1].equals(rowOfO))
         {
             isAnOWin = true;
         }
-        else if (board[2] == {'O','O','O'})
+        else if (board[2].equals(rowOfO))
         {
             isAnOWin = true;
         }
