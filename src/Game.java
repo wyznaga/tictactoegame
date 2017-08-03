@@ -31,13 +31,13 @@ public class Game
                 	{
                 		if (i%2 == 0)
                 		{
-                			System.out.println("Player One, please enter your move x- and y-coordinate;");
-     						System.out.println("For example, 0, ENTER, 0 for the top-right corner");
+                			System.out.println("Player One, please enter your move x- and y-coordinate, with each number separated by a newline;");
+     						System.out.println("For example, '0' 'ENTER' '0' for the top-left corner.");
      						x = scan.nextByte();
      						temporaryFiller = scan.nextLine();
      						y = scan.nextByte();
      						temporaryFiller = scan.nextLine();
-     						boardGame.board[x][y] = 'X';
+     						boardGame.board[y][x] = 'X';
      						System.out.println("Board status:");
      						for (int k = 0; k < 3; k++)
      						{
@@ -51,8 +51,8 @@ public class Game
                 		}
                 		else
                 		{
-                			System.out.println("Player Two, please enter your move x- and x-coordinate;");
-     						System.out.println("For example, 0, ENTER, 0 for the top-right corner");
+                			System.out.println("Player Two, please enter your move x- and y-coordinate, with each number separated by a newline;");
+     						System.out.println("For example, '0' 'ENTER' '0' for the top-left corner.");
      						x = scan.nextByte();
      						temporaryFiller = scan.nextLine();
      						y = scan.nextByte();
@@ -94,14 +94,15 @@ public class Game
 	            System.exit(0);
 	            break;
             default:
-                System.out.println("I'm sorry, but your choice was _not_ valid.");
-                System.out.println("Please restart this program and try again ... ");
+                System.out.println("I'm sorry, but your choice was invalid.");
+                System.out.println("Please restart this program and try again.");
                 System.exit(1);
                 break;
         }
     }
 }
-//Property of B3r5t Team Inc.
-//CEO - William Yznaga
-//COO - Jacob Sarver-Verhey
-//Muffin - Ethan Jeffers
+// Copyright (c) 2017 B3r5t Team, LLC.
+// CEO		- William Yznaga
+// COO		- Jacob Sarver-Verhey
+// Muffin Man 	- Ethan Jeffers
+// Intern	- Luke Patterson
