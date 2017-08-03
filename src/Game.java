@@ -20,14 +20,15 @@ public class Game
 	    
 	    byte firstChoice = scan.nextByte();
 	    temporaryFiller = scan.nextLine();
-	    
+
 	    switch (firstChoice)
 	    {
             case 1:
-                for (int i = 0; i < 9; i++)
+                int i = 0;
+		while (true)
                 {
                 	byte x, y;
-                	if (!(boardGame.hasXWin()) && !(boardGame.hasXWin()))
+                	if (!(boardGame.hasXWin() || boardGame.hasOWin()))
                 	{
                 		if (i%2 == 0)
                 		{
@@ -72,6 +73,7 @@ public class Game
                 	}
                 	else
                 	{
+				System.out.println("Possible win condition detected; evaluating now.");
                 		if (boardGame.hasXWin())
                 		{
                 			System.out.println("Player One has won! Congratulations!");
@@ -85,11 +87,10 @@ public class Game
                 			System.exit(0);
                 		}
                 	}
+                i++;
                 }
-                System.exit(1);
-                break;
             case 2:
-	            System.out.print("Thank you for playing Tic-Tac-CLI v0.1! Bye for now ... ");
+	            System.out.print("Thank you for playing Tic-Tac-CLI v0.1! Bye for now!");
 	            System.out.println();
 	            System.exit(0);
 	            break;
