@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Board
 {
     public char[][] board = {{'_','_','_'},{'_','_','_'},{'_','_','_'}};
@@ -18,15 +20,15 @@ public class Board
     public boolean hasXWin()
     {
         char[] rowOfX = {'X', 'X', 'X'};
-        if (this.board[0].equals(rowOfX))
+        if (Arrays.equals(rowOfX, this.board[0]))
         {
             isAnXWin = true;
         }
-        else if (this.board[1].equals(rowOfX))
+        else if (Arrays.equals(rowOfX, this.board[1]))
         {
             isAnXWin = true;
         }
-        else if (this.board[2].equals(rowOfX))
+        else if (Arrays.equals(rowOfX, this.board[2]))
         {
             isAnXWin = true;
         }
@@ -60,15 +62,15 @@ public class Board
     public boolean hasOWin()
     {
         char[] rowOfO = {'O', 'O', 'O'};
-        if (this.board[0].equals(rowOfO))
+        if (Arrays.equals(rowOfO, this.board[0]))
         {
             isAnOWin = true;
         }
-        else if (this.board[1].equals(rowOfO))
+        else if (Arrays.equals(rowOfO, this.board[1]))
         {
             isAnOWin = true;
         }
-        else if (this.board[2].equals(rowOfO))
+        else if (Arrays.equals(rowOfO, this.board[2]))
         {
             isAnOWin = true;
         }
